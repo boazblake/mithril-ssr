@@ -1,11 +1,14 @@
 import {getTitle} from '../utils'
-
+import m from 'mithril'
+import Layout from "./layout.js"
 export default vnode => <html lang="js">
 <head>
   <title>{ getTitle(vnode) }</title>
 </head>
-<body>
-  { template(vnode) }
+  <body>
+    <header>HEADER</header>
+    {m(vnode)}
+    <footer>FOOTER</footer>
   <script src='./assets/javascripts/bundle.js'></script>
   <script>
     requestAnimationFrame(function(){'{'}
