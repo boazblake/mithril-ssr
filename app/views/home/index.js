@@ -3,5 +3,6 @@ import m from "mithril"
 
 export default {
   oninit: (v) => (v.state.title = "HOME PAGE"),
-  view: () => m("a", { href: "mithril-ssr/#!/child" }, "go to child"),
+  view: () =>
+    m(m.route.link, { selector: "h1", href: "/child" }, "go to child"),
 }
