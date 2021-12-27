@@ -1,10 +1,10 @@
-'use strict';
-import domready from 'domready';
-import m from 'mithril';
-import routes   from './routes';
+"use strict"
+import domready from "domready"
+import m from "mithril"
+import routes from "./routes"
 
-// m.route.prefix('');
+m.route.prefix("mithril-ssr")
 
-domready(function(){
-  m.route(document.body, '/', routes);
-});
+domready(function () {
+  m.route(document.body, "/", routes)
+})
